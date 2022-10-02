@@ -1,0 +1,55 @@
+{
+  "nodes": {
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1659877975,
+        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "man-pages-ja": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-GPxfGzDo9RhQlk67uhfrdhm1VOcyCrFfDOa5gAmxvd8=",
+        "type": "tarball",
+        "url": "https://linuxjm.osdn.jp/man-pages-ja-20220815.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://linuxjm.osdn.jp/man-pages-ja-20220815.tar.gz"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1664645775,
+        "narHash": "sha256-+s3H2v8z4E6KNJl1JGAvcoBxlz25/Q+R//fElE0T6Ac=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "14c5d226877aa90f656895ab7ab2badc4af03268",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixpkgs-unstable",
+        "type": "indirect"
+      }
+    },
+    "root": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "man-pages-ja": "man-pages-ja",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
