@@ -18,22 +18,22 @@
     "man-pages-ja": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-GPxfGzDo9RhQlk67uhfrdhm1VOcyCrFfDOa5gAmxvd8=",
-        "type": "tarball",
+        "narHash": "sha256-8lPdOG7BpixVpFtxGIOmR7b+GyC/TU307vysKLAaDDo=",
+        "type": "file",
         "url": "https://linuxjm.osdn.jp/man-pages-ja-20220815.tar.gz"
       },
       "original": {
-        "type": "tarball",
+        "type": "file",
         "url": "https://linuxjm.osdn.jp/man-pages-ja-20220815.tar.gz"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1664645775,
-        "narHash": "sha256-+s3H2v8z4E6KNJl1JGAvcoBxlz25/Q+R//fElE0T6Ac=",
+        "lastModified": 1664787379,
+        "narHash": "sha256-gfKKtflfRcyxUPeTQ1JwyF1vXdyVvjO6Zy7GVyDdPro=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "14c5d226877aa90f656895ab7ab2badc4af03268",
+        "rev": "2c2c0afe1b5b31ed6a559ec4687b58608fa9069d",
         "type": "github"
       },
       "original": {

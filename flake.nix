@@ -4,7 +4,10 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
+    # NAR hash differs between case-sensitive and case-insensitive systems after archiving.
+    # So we store archived file itself.
     man-pages-ja = {
+      type = "file";
       url = "https://linuxjm.osdn.jp/man-pages-ja-20220815.tar.gz";
       flake = false;
     };
@@ -25,6 +28,7 @@
           {
             name = "man-pages-ja";
             src = man-pages-ja;
+            unpackCmd = "tar xvzf $curSrc";
             nativeBuildInputs = with pkgs; [ perl ];
             buildInputs = with pkgs; [ makeWrapper groff ];
 
