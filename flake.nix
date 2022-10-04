@@ -56,10 +56,16 @@
               mkdir -p $out/etc
               echo "JNROFF ${pkgs.groff}/bin/groff -Dutf8 -Tutf8 -mandoc -mja -E" >$out/etc/man.conf
 
-              makeWrapper "$(PATH=/usr/local/bin:/usr/bin:/bin ${pkgs.which}/bin/which man)" "$out/bin/jaman" \
-                --set MANPATH $out/share/man \
-                --set LANG ja_JP.UTF-8 \
-                --add-flags "-C$out/etc/man.conf"
+              cat <<EOF >"$out/bin/jaman"
+              #!${pkgs.runtimeShell}
+              MANPATH=$out/share/man LANG=ja_JP.UTF-8 \$(which man) "-C$out/etc/man.conf" "\$@"
+              EOF
+              chmod +x "$out/bin/jaman"
+
+              # makeWrapper /usr/bin/man "$out/bin/jaman" \
+              #   --set MANPATH $out/share/man \
+              #   --set LANG ja_JP.UTF-8 \
+              #   --add-flags "-C$out/etc/man.conf"
             '';
 
             outputDocdev = "out";
