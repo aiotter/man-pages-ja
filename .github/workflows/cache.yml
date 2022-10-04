@@ -24,4 +24,7 @@ jobs:
           authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
 
       - run: nix build .
+      - run: nix log .
+        if: ${{ failure() }}
+
       - run: nix flake check
