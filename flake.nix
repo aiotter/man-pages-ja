@@ -56,7 +56,7 @@
               mkdir -p $out/etc
               echo "JNROFF ${pkgs.groff}/bin/groff -Dutf8 -Tutf8 -mandoc -mja -E" >$out/etc/man.conf
 
-              makeWrapper /usr/bin/man "$out/bin/jaman" \
+              makeWrapper "$(PATH=/usr/local/bin:/usr/bin:/bin ${pkgs.which}/bin/which man)" "$out/bin/jaman" \
                 --set MANPATH $out/share/man \
                 --set LANG ja_JP.UTF-8 \
                 --add-flags "-C$out/etc/man.conf"
